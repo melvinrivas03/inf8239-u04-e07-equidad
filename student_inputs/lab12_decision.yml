@@ -1,6 +1,26 @@
-priority_harm: REPLACE
-primary_metric: REPLACE
-tolerance: REPLACE
-evidence: REPLACE
-limitation: REPLACE
-recommendation: REPLACE
+# U04.LAB12 · Decisión contextual. Valores decididos por el estudiante (Melvin H. Rivas Genao, 100279298).
+priority_harm: >-
+  Falso negativo: un caso de riesgo real no se prioriza y su revisión humana se retrasa. El daño recae
+  sobre la persona afectada, que tiene poco poder en el proceso.
+primary_metric: >-
+  Recall por grupo y brecha de recall entre G1 y G2. Métricas secundarias: brecha de FPR (escrutinio
+  innecesario) y recall global.
+tolerance: >-
+  Brecha de recall de 0.16 o menos sobre la estimación puntual (puerta del curso), recall global de 0.68
+  o más y brecha de FPR de 0.16 o menos. Además se monitorea el IC 95 %: con al menos 200 casos por
+  grupo, su límite superior también debe quedar en 0.16 o menos.
+evidence: >-
+  Logística baseline: recall 0.717; recall G1 0.653 y G2 0.791; brecha 0.138 con IC 95 % [0.01, 0.32];
+  brecha de FPR 0.125 con IC [0.01, 0.39]. Cumple las puertas del curso sobre la estimación puntual,
+  pero no con el límite superior del IC. 4 de 8 intersecciones no tienen soporte suficiente. Ver
+  reports/e07/.
+limitation: >-
+  Prueba con sólo 160 casos (59 en G2), datos sintéticos y tasas base distintas (0.64 en G2 frente a
+  0.50 en G1). No pueden igualarse a la vez todas las tasas de error. Una brecha observada justifica
+  investigar, pero no prueba discriminación causal.
+recommendation: >-
+  LIMITAR. Piloto acotado con la logística baseline, sólo como orden sugerido de revisión: todos los
+  casos se revisan, sin usar el grupo protegido al decidir, con aviso, apelación, monitoreo mensual de
+  brechas con IC y condición de retiro. No se adoptan ThresholdOptimizer (usa el grupo al decidir),
+  ExponentiatedGradient (sube la brecha de FPR a 0.21 y aleatoriza) ni el árbol (falla las puertas y
+  ocupa el doble).

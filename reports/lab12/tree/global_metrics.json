@@ -1,0 +1,22 @@
+{
+  "metrics": {
+    "count": 160.0,
+    "accuracy": 0.70625,
+    "selection_rate": 0.54375,
+    "recall": 0.717391304347826,
+    "precision": 0.7586206896551724,
+    "fpr": 0.3088235294117647
+  },
+  "differences": {
+    "count": 42.0,
+    "accuracy": 0.06259439503272357,
+    "selection_rate": 0.26631985232421546,
+    "recall": 0.1813004271476032,
+    "precision": 0.1444444444444445,
+    "fpr": 0.16826923076923078
+  },
+  "resources": {
+    "training_seconds": 0.01961041499998828,
+    "model_kb": 7.9013671875
+  }
+}
