@@ -1,0 +1,9 @@
+grupo,count,accuracy,selection_rate,recall,precision,fpr,positivos,negativos,recall_interpretable,fpr_interpretable,advertencia
+G1 | 18-29,18.0,0.83333,0.27778,0.75,0.6,0.14286,4,14,False,False,soporte insuficiente: no interpretar como brecha; recolectar más datos
+G1 | 30-44,24.0,0.66667,0.41667,0.5625,0.9,0.125,16,8,True,True,
+G1 | 45-59,35.0,0.6,0.48571,0.58824,0.58824,0.38889,17,18,True,True,
+G1 | 60+,24.0,0.79167,0.54167,0.83333,0.76923,0.25,12,12,True,True,
+G2 | 18-29,11.0,0.90909,0.63636,0.875,1.0,0.0,8,3,False,False,soporte insuficiente: no interpretar como brecha; recolectar más datos
+G2 | 30-44,14.0,0.64286,0.64286,0.66667,0.88889,0.5,12,2,False,False,soporte insuficiente: no interpretar como brecha; recolectar más datos
+G2 | 45-59,8.0,1.0,0.75,1.0,1.0,0.0,6,2,False,False,soporte insuficiente: no interpretar como brecha; recolectar más datos
+G2 | 60+,26.0,0.65385,0.69231,0.76471,0.72222,0.55556,17,9,True,True,

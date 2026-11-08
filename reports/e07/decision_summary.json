@@ -1,0 +1,47 @@
+{
+  "decision_estudiante": {
+    "priority_harm": "Falso negativo: un caso de riesgo real no se prioriza y su revisión humana se retrasa. El daño recae sobre la persona afectada, que tiene poco poder en el proceso.",
+    "primary_metric": "Recall por grupo y brecha de recall entre G1 y G2. Métricas secundarias: brecha de FPR (escrutinio innecesario) y recall global.",
+    "tolerance": "Brecha de recall de 0.16 o menos sobre la estimación puntual (puerta del curso), recall global de 0.68 o más y brecha de FPR de 0.16 o menos. Además se monitorea el IC 95 %: con al menos 200 casos por grupo, su límite superior también debe quedar en 0.16 o menos.",
+    "evidence": "Logística baseline: recall 0.717; recall G1 0.653 y G2 0.791; brecha 0.138 con IC 95 % [0.01, 0.32]; brecha de FPR 0.125 con IC [0.01, 0.39]. Cumple las puertas del curso sobre la estimación puntual, pero no con el límite superior del IC. 4 de 8 intersecciones no tienen soporte suficiente. Ver reports/e07/.",
+    "limitation": "Prueba con sólo 160 casos (59 en G2), datos sintéticos y tasas base distintas (0.64 en G2 frente a 0.50 en G1). No pueden igualarse a la vez todas las tasas de error. Una brecha observada justifica investigar, pero no prueba discriminación causal.",
+    "recommendation": "LIMITAR. Piloto acotado con la logística baseline, sólo como orden sugerido de revisión: todos los casos se revisan, sin usar el grupo protegido al decidir, con aviso, apelación, monitoreo mensual de brechas con IC y condición de retiro. No se adoptan ThresholdOptimizer (usa el grupo al decidir), ExponentiatedGradient (sube la brecha de FPR a 0.21 y aleatoriza) ni el árbol (falla las puertas y ocupa el doble)."
+  },
+  "candidato_recomendado": "Logística (baseline del curso)",
+  "puertas": {
+    "min_recall": 0.68,
+    "max_recall_gap": 0.16,
+    "max_fpr_gap": 0.16,
+    "max_latency_ms": 500,
+    "max_model_kb": 1024
+  },
+  "baseline": {
+    "recall": 0.717391304347826,
+    "recall_G1": 0.6530612244897959,
+    "recall_G2": 0.7906976744186046,
+    "recall_gap": 0.13763644992880875,
+    "recall_gap_ic95": "[0.010, 0.318]",
+    "fpr_gap": 0.125,
+    "fpr_gap_ic95": "[0.006, 0.398]",
+    "kb_modelo": 3.5634765625,
+    "latencia_ms": 0.01911993125034428
+  },
+  "cumple_puertas_curso": true,
+  "cumple_con_ic_superior": false,
+  "intersecciones_sin_soporte": 4,
+  "intersecciones_total": 8,
+  "umbral_validacion": 0.56,
+  "regla_k": 3.0,
+  "riesgos": 11,
+  "riesgos_prioridad_8_o_mas": 4,
+  "normas_por_tipo": {
+    "marco voluntario": 6,
+    "obligación legal": 4,
+    "recomendación ética": 3
+  },
+  "entorno": {
+    "python": "3.12.3"
+  },
+  "semilla": 42,
+  "bootstrap": 2000
+}

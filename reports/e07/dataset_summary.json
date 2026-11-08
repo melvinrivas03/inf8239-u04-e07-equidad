@@ -1,0 +1,33 @@
+{
+  "filas": 640,
+  "positivos_pct": 0.5515625,
+  "tasa_base_por_grupo": {
+    "G1": 0.4975,
+    "G2": 0.6393
+  },
+  "n_por_grupo": {
+    "G1": 396,
+    "G2": 244
+  },
+  "train_hasta": "2026-09-24",
+  "test_desde": "2026-09-25",
+  "n_train": 480,
+  "n_test": 160,
+  "test_por_grupo": {
+    "G1": 101,
+    "G2": 59
+  },
+  "variables_modelo": [
+    "zone",
+    "age_band",
+    "previous_incidents",
+    "infrastructure_score",
+    "exposure"
+  ],
+  "excluidas_del_modelo": [
+    "case_id",
+    "received_date",
+    "protected_group",
+    "target"
+  ]
+}

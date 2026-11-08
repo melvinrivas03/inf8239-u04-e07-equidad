@@ -1,0 +1,60 @@
+{
+  "GOVERN": {
+    "acciones": [
+      "propietario y RACI definidos",
+      "usos prohibidos en configuración",
+      "matriz normativa",
+      "declaración de uso de IA"
+    ],
+    "evidencia": [
+      "student_inputs/raci.csv",
+      "configs/governance.yml",
+      "docs/NORMATIVE_MATRIX.csv",
+      "docs/AI_USE_DECLARATION.md"
+    ],
+    "archivos_presentes": true,
+    "advertencia": "La presencia de archivos no demuestra que el control sea eficaz; ver pruebas y piloto."
+  },
+  "MAP": {
+    "acciones": [
+      "finalidad, usuarios, afectados y alternativa no predictiva",
+      "interesados con poder y daño",
+      "11 riesgos con escenario, control y responsable"
+    ],
+    "evidencia": [
+      "student_inputs/lab11_impact.yml",
+      "student_inputs/stakeholders.csv",
+      "student_inputs/risk_register.csv"
+    ],
+    "archivos_presentes": true,
+    "advertencia": "La presencia de archivos no demuestra que el control sea eficaz; ver pruebas y piloto."
+  },
+  "MEASURE": {
+    "acciones": [
+      "métricas globales, por grupo e interseccionales con soporte",
+      "IC 95 % por bootstrap de las brechas",
+      "7 candidatos con costo"
+    ],
+    "evidencia": [
+      "reports/e07/candidates.csv",
+      "reports/e07/bootstrap_gaps_baseline.csv",
+      "reports/e07/intersectional_baseline.csv",
+      "reports/e07/gates.csv"
+    ],
+    "archivos_presentes": true,
+    "advertencia": "La presencia de archivos no demuestra que el control sea eficaz; ver pruebas y piloto."
+  },
+  "MANAGE": {
+    "acciones": [
+      "decisión LIMITAR con condiciones",
+      "condición de retiro y apelación",
+      "monitoreo de brechas por ventanas"
+    ],
+    "evidencia": [
+      "student_inputs/lab12_decision.yml",
+      "reports/lab11/DECISION_RECORD.md"
+    ],
+    "archivos_presentes": true,
+    "advertencia": "La presencia de archivos no demuestra que el control sea eficaz; ver pruebas y piloto."
+  }
+}

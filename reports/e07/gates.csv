@@ -1,0 +1,8 @@
+candidato,recall,recall_gap,fpr_gap,latency,model_size,recall_gap_ic_sup,fpr_gap_ic_sup,sin_atributo_al_decidir,cumple_puertas_curso,cumple_con_ic_superior
+Logística (baseline del curso),True,True,True,True,True,False,False,True,True,False
+Árbol (alternativa del curso),True,False,False,True,True,False,False,True,False,False
+Logística sin zona (sin proxy territorial),True,True,False,True,True,False,False,True,False,False
+Regla transparente (no predictiva),True,True,True,True,True,False,False,True,True,False
+"Logística, umbral 0.56 (recall objetivo 0.80 en validación)",True,True,True,True,True,False,False,True,True,False
+"ExponentiatedGradient (odds igualadas, ε = 0.05)",True,True,False,True,True,False,False,True,False,False
+ThresholdOptimizer (umbrales por grupo),True,True,False,True,True,False,False,False,False,False

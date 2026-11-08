@@ -1,0 +1,3 @@
+g,n,positivos,negativos,recall_interpretable,fpr_interpretable,advertencia
+G1,101,49,52,True,True,
+G2,59,43,16,True,True,
