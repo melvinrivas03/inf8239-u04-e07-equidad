@@ -1,9 +1,36 @@
-purpose: REPLACE
-assisted_decision: REPLACE
-users: REPLACE
-affected_population: REPLACE
-owner: REPLACE
-non_predictive_alternative: REPLACE
-out_of_scope_use: REPLACE
-withdrawal_condition: REPLACE
-appeal_mechanism: REPLACE
+# U04.LAB11 · Ficha de propósito e interesados (Melvin H. Rivas Genao, 100279298)
+# Caso: Territorial Review DSS - Synthetic (configs/governance.yml). Datos sintéticos; no hay personas reales.
+purpose: >-
+  Ordenar los casos territoriales sintéticos que llegan cada día para que el equipo técnico revise
+  primero los de mayor riesgo estimado. El sistema sugiere un orden de revisión; no decide
+  intervenciones, elegibilidad ni emergencias.
+assisted_decision: >-
+  Qué casos revisa primero un analista humano dentro de su capacidad diaria. Todos los casos
+  siguen en la cola y ninguno se descarta. La decisión sobre cada caso la toma y la firma el revisor.
+users: >-
+  Analistas y revisores técnicos de la unidad territorial (operadores), y su supervisión.
+affected_population: >-
+  Personas y comunidades vinculadas a cada caso territorial, en especial los grupos G1 y G2 y las
+  bandas de edad, que podrían ver su revisión retrasada (falso negativo) o recibir escrutinio
+  innecesario (falso positivo).
+owner: >-
+  Institutional Owner (A en respuesta a incidentes) y Product Owner (A en validación y despliegue),
+  según student_inputs/raci.csv.
+non_predictive_alternative: >-
+  Revisión por orden de llegada con una regla transparente de urgencia: priorizar si hay 3 o más
+  incidentes previos (la mediana del entrenamiento). Su desempeño se audita junto al modelo en
+  reports/e07/candidates.csv.
+out_of_scope_use: >-
+  Intervención automática, decisión de elegibilidad y declaración de emergencia (prohibidas en
+  configs/governance.yml). Tampoco se permite usar el grupo protegido para decidir, perfilar
+  personas o zonas, ni aplicar el sistema a datos reales sin una nueva evaluación de impacto.
+withdrawal_condition: >-
+  Suspender el uso y volver a la alternativa no predictiva si ocurre cualquiera de estas condiciones:
+  (1) el recall global baja de 0.68, o la brecha de recall entre grupos supera 0.16, en dos ventanas
+  mensuales consecutivas con al menos 100 casos cada una; (2) con al menos 200 casos por grupo, el
+  límite superior del IC 95 % de la brecha de recall sigue por encima de 0.16; (3) se detecta un uso
+  fuera de alcance; (4) el mecanismo de apelación no responde en plazo.
+appeal_mechanism: >-
+  Cualquier persona afectada, o su representante, puede pedir que un revisor distinto del que trabajó
+  el caso revise su posición en la cola. Respuesta en un máximo de 5 días hábiles, con registro en
+  bitácora. El sistema nunca cierra ni descarta casos: la apelación siempre llega a una persona.
